@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand-navy: #081225;
+  --color-brand-deep: #0f2744;
+  --color-brand-blue: #0284c7;
+  --color-brand-cyan: #06b6d4;
+  --color-brand-sky: #38bdf8;
+  --color-brand-ice: #f0f9ff;
+  --color-brand-accent: #0ea5e9;
+  --color-brand-amber: #f59e0b;
+}
+
+:root {
+  --primary-blue: #0284c7;
+  --primary-dark: #081225;
+  --accent-cyan: #06b6d4;
+  --bg-soft: #f8fafc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1e293b;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Water Glow & Shimmer */
+.water-gradient {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #075985 100%);
+}
+
+.hero-gradient {
+  background: radial-gradient(120% 120% at 50% 0%, #e0f2fe 0%, #f0f9ff 45%, #ffffff 100%);
+}
+
+.dark-water-gradient {
+  background: linear-gradient(135deg, #081225 0%, #0d223f 50%, #102d53 100%);
+}
+
+.cyan-glow {
+  box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.4);
+}
+
+.blue-glow {
+  box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.4);
+}
+
+/* Glass Card */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark-glass-panel {
+  background: rgba(15, 35, 65, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Pulse animation for call/live indicators */
+@keyframes softPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.05); }
+}
+
+.soft-pulse {
+  animation: softPulse 2s infinite ease-in-out;
+}
